@@ -1,0 +1,11 @@
+/Eastcoast/bin/
+/Eastcoast/obj/
+/.vs/
+/Eastcoast/Eastcoast.csproj.user
+/Services/obj/
+/packages/
+/Eastcoast/node_modules/
+/Services/bin
+/Services/Services.csproj.user
+/Eastcoast/Scripts/main.js
+Eastcoast/Properties/PublishProfiles/
