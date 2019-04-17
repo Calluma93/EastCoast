@@ -1,0 +1,123 @@
+.category-page {
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+    gap: 50px 50px;
+    margin-top: 50px;
+    justify-items: center;
+
+    @include below(769px) {
+        grid-template-rows: 2% auto;
+        grid-template-columns: 5% 1fr 5%;
+    }
+
+    .heading-text {
+        grid-area: 1 / 2 / span 1 / span 3;
+        justify-self: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2rem;
+        margin: 0;
+
+        @include below(769px) {
+            grid-area: 1 / 2;
+            font-size: 1.1rem;
+        }
+    } 
+
+    img {
+        border-radius: 50%;
+        width: 400px;
+        border: $mid-shade 3px solid;
+    }
+
+    .product {
+
+        &:nth-child(2) {
+            grid-area: 2 / 3;
+
+            @include below(769px) {
+                grid-area: 2 / 2;
+            }
+        }
+
+        &:nth-child(3) {
+            grid-area: 2 / 2;
+
+            @include below(769px) {
+                grid-area: 3 / 2;
+            }
+        }
+
+        &:nth-child(4) {
+            grid-area: 2 / 4;
+
+            @include below(769px) {
+                grid-area: 4 / 2;
+            }
+        }
+
+        &:nth-child(5) {
+            grid-area: 3 / 3;
+
+            @include below(769px) {
+                grid-area: 5 / 2;
+            }
+        }
+
+        &:nth-child(6) {
+            grid-area: 3 / 2;
+
+            @include below(769px) {
+                grid-area: 6 / 2;
+            }
+        }
+
+        &:nth-child(7) {
+            grid-area: 3 / 4;
+
+            @include below(769px) {
+                grid-area: 7 / 2;
+            }
+        }
+
+        &:nth-child(8) {
+            grid-area: 4 / 3;
+
+            @include below(769px) {
+                grid-area: 8 / 2;
+            }
+        }
+
+        &:nth-child(9) {
+            grid-area: 4 / 4;
+
+            @include below(769px) {
+                grid-area: 9 / 2;
+            }
+        }
+
+        &:nth-child(10) {
+            grid-area: 4 / 2;
+
+            @include below(769px) {
+                grid-area: 10 / 2;
+            }
+        }
+
+        &:nth-child(11) {
+            grid-area: 5 / 3;
+
+            @include below(769px) {
+                grid-area: 11 / 2;
+            }
+        }
+
+        .product-title {
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.5rem; 
+            margin-top: 10px;
+        }
+    }
+}

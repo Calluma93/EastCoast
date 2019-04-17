@@ -1,0 +1,32 @@
+﻿@using Eastcoast.Models.Product
+@model IEnumerable<ColourOptionViewModel>
+
+<div class="options">
+
+    <h2 class="options-heading">
+    available colours
+    </h2>
+
+    @foreach (var option in Model)
+    {
+        <div class="colour-option">
+
+            <img src="@option.MainImage.ImageUrl" alt="@option.MainImage.Title" />
+
+            @foreach (var large in option.LargeImages)
+            {
+                <input type="hidden" class="large-images" data-src="@large.ImageUrl" data-title="@large.Title">
+            }
+
+            @foreach (var small in option.SmallImages)
+            {
+                <input type="hidden" class="small-images" data-src="@small.ImageUrl" data-title="@small.Title">
+            }
+
+            <p>@option.ColourName</p>
+            
+        </div>
+
+    }
+
+</div>

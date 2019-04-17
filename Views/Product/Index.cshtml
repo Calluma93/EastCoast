@@ -1,0 +1,50 @@
+﻿@model Eastcoast.Models.Product.ProductPageViewModel
+
+@section Meta{
+    @Html.Partial("_MetaSection", Model)
+}
+
+@foreach (var banner in Model.Banners)
+{
+    <div class="product-banner">
+        <picture>
+            <source srcset="@banner.MobileImageUrl" media="(max-width: 767px)" />
+            <img srcset="@banner.ImageUrl" alt="@banner.Title" />
+        </picture>
+    </div>
+}
+
+<div class="product-page">
+
+    <h1 class="heading-text">@Model.Heading</h1>
+
+    @Html.Partial("_Content", Model.Content)
+
+    @if (Model.ColourOptions.Any() == true)
+    {
+        @Html.Partial("_Options", Model.ColourOptions)
+    }
+
+    @Html.Partial("_Specifications", Model.Specs)
+
+    <div class="products-slider lightgallery lazy">
+        @foreach (var image in Model.PrimaryColour.LargeImages)
+        {
+            <a class="item" href="@image.ImageUrl">
+                <img class="large-gallery" src="@image.ImageUrl" alt="@image.Title" />
+            </a>
+        }
+    </div>
+
+    <div class="image-gallery">
+        <p>image gallery</p>
+
+        <div class="products-slider-nav">
+            @foreach (var image in Model.PrimaryColour.SmallImages)
+            {
+                <img class="small-gallery" src="@image.ImageUrl" alt="@image.Title" />
+            }
+        </div>
+    </div>
+
+</div>

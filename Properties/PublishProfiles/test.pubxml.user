@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Callum\Desktop\EastcoastTest</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="apple-touch-icon.png">
+      <publishTime>01/08/2019 17:38:27</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/22/2013 08:43:40</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>01/09/2019 10:58:27</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>01/09/2019 10:58:27</publishTime>
+    </File>
+    <File Include="bin/Eastcoast.dll">
+      <publishTime>01/09/2019 10:56:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 02:06:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/25/2013 15:40:12</publishTime>
+    </File>
+    <File Include="bin/Ninject.dll">
+      <publishTime>11/13/2017 03:01:30</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Common.dll">
+      <publishTime>05/22/2018 01:16:40</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Common.WebHost.dll">
+      <publishTime>05/22/2018 01:16:42</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Mvc.dll">
+      <publishTime>10/23/2017 08:19:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/Services.dll">
+      <publishTime>01/09/2019 10:56:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 04:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 15:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 04:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/WebActivatorEx.dll">
+      <publishTime>10/05/2016 13:11:52</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>07/17/2013 17:03:52</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>01/08/2019 17:38:27</publishTime>
+    </File>
+    <File Include="Images/Banners/EC-GB200-NT-banner.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/Banners/EC-GL130-TB-banner.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/Banners/EC-GS100H-BKM-banner.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/Banners/EC-GTB500T-NT-banner.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/Banners/EC-GVQ230Q-PRO-SM-banner.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/Retailers/where-to-buy-andertons.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/Retailers/where-to-buy-guitar.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/Retailers/where-to-buy-pmt.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/Shared/eastcoast-logo.png">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/Shared/hamburger-menu.png">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/YouTube/YouTube-Thumbnail-1.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/YouTube/YouTube-Thumbnail-2.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/YouTube/YouTube-Thumbnail-3.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/YouTube/YouTube-Thumbnail-4.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/YouTube/YouTube-Thumbnail-5.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Images/YouTube/YouTube-Thumbnail-6.jpg">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>01/09/2019 10:58:24</publishTime>
+    </File>
+    <File Include="robots.txt">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Scripts/main.js">
+      <publishTime>01/09/2019 10:58:23</publishTime>
+    </File>
+    <File Include="sitemap.xml">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Videos/HoldingPage/holding-page-1080p.mp4">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Videos/HoldingPage/holding-page-480p.mp4">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Videos/HoldingPage/holding-page-720p.mp4">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Views/Product/Index.cshtml">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Views/Products/Index.cshtml">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Views/Shared/NotFound.cshtml">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_Banner.cshtml">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_Menu.cshtml">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_MetaSection.cshtml">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Views/WhereToBuy/Index.cshtml">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>01/08/2019 16:56:17</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/09/2019 10:58:23</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

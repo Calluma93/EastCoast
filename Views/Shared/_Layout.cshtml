@@ -1,0 +1,40 @@
+﻿@model Eastcoast.Models.Shared.LayoutViewModel
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+@RenderSection("Meta", required: false)
+
+<link rel="apple-touch-icon" href="~/apple-touch-icon.png">
+
+@Scripts.Render("~/Scripts/Main")
+
+<header class="main-header">
+
+    <a class="logo" href="@Url.Action("Index", "Home")">
+        <img src="@Model.LogoImage.ImageUrl" alt="@Model.LogoImage.Title" />
+    </a>
+
+    <div class="hamburger">
+        <img src=@Model.HamburgerImage.ImageUrl alt="@Model.HamburgerImage.Title">
+    </div>
+
+    <nav class="menu">
+        @Html.Partial("_Menu", Model.MainMenu)
+    </nav>
+    
+</header>
+
+@RenderBody()
+
+<footer class="main-footer">
+
+    <p class="copyright">Eastcoast &copy; @DateTime.Now.Year, All rights reserved.</p>
+
+</footer>
+
+</html>

@@ -1,0 +1,24 @@
+﻿@model Eastcoast.Models.WhereToBuy.WhereToBuyPageViewModel
+
+@section Meta{
+    @Html.Partial("_MetaSection", Model)
+}
+
+@Html.Partial("_Banner", Model)
+
+<div class="where-to-buy-page">
+
+    <h1 class="heading-text">@Model.Heading</h1>
+
+    <p class="subheading-text">@Model.SubHeading</p>
+
+    @foreach (var retailer in Model.Retailers)
+    {
+        <a href="@retailer.WebsiteUrl">
+            <img src="@retailer.Image.ImageUrl" alt="@retailer.Image.Title" />
+            <p>@retailer.Title</p>
+        </a>
+    }
+
+</div>
+

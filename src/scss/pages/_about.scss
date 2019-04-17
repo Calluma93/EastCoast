@@ -1,0 +1,205 @@
+// ###### About Page ###### \\
+.about-page {
+    display: grid;
+    grid-template-columns: 1% 1fr 1fr 1fr 1fr 1fr 1%;
+    gap: 15px 70px;
+    margin-top: 50px;
+    height: auto;
+
+    @include below(560px) {
+        grid-template-columns: 5% 90% 5%;
+        gap: 50px 0;
+
+        p {
+            text-align: center;
+        }
+    }
+
+    @include between(560px, 1024px) {
+        display: grid;
+        grid-template-columns: 1% 1fr 1fr 1fr 1fr 1fr 1%;
+        gap: 0 20px;
+    }
+
+    .heading-text {
+        grid-area: 1 / 4 / span 1 / span 2;
+        justify-self: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.9rem;
+
+        @include below(560px) {
+            grid-area: 1 / 2;
+            font-size: 1.7rem;
+        }
+
+        @include between(560px, 1024px) {
+            grid-area: 1 / 4 / span 1 / span 3;
+        }
+    }    
+
+    a {
+
+        img {
+            border-radius: 50%;
+        }
+
+        &:nth-child(2) {
+            grid-area: 4 / 4 / span 1 / span 1;
+            
+            @include below(560px) {
+                grid-area: 3 / 2 / span 1 / span 1;
+            }
+        }
+    
+        &:nth-child(3) {
+            grid-area: 1 / 2 / span 3 / span 2;
+
+            @include below(560px) {
+                grid-area: 5 / 2 / span 1 / span 1;
+            }
+
+            @include between(560px, 1024px) {
+                grid-area: 4 / 4;
+            }
+        }
+    
+        &:nth-child(4) {
+            grid-area: 4 / 5 / span 1 / span 1;
+
+            @include below(560px) {
+                grid-area: 7 / 5 / span 1 / span 1;
+            }
+
+            @include between(560px, 1024px) {
+                grid-area: 4 / 5;
+            }
+        }
+    
+        &:nth-child(5) {
+            grid-area: 4 / 6 / span 1 / span 1;
+
+            @include below(560px) {
+                grid-area: 3 / 6 / span 1 / span 1;
+            }
+
+            @include between(560px, 1024px) {
+                grid-area: 4 / 6;
+            }
+        }
+    
+    }
+
+    .eastcoast-logo {
+        grid-area: 6 / 2 / span 1 / span 2;
+        justify-self: center;
+        border-radius: 0;
+
+        @include below(1024px) {
+            display: none;
+        }
+    }
+
+    .content-subheading {
+        grid-area: 1 / 4 / span 1 / span 3;
+        margin-top: 70px;
+        font-size: 1.4rem;
+
+        @include below(560px) {
+            grid-area: 2 / 2 / span 1 / span 1;
+            margin-top: 0;
+        }
+
+        @include between(560px, 1024px) {
+            grid-area: 2 / 4 / span 1 / span 3;
+            font-size: 0.9rem;
+            align-self: end;
+            margin-top: 0;
+        }
+    }
+
+    //1st Paragraph
+    .content-paragraph {
+        grid-area: 4 / 2 / span 1 / span 2;
+        align-self: center;
+
+        @include below(560px) {
+            grid-area: 6 / 2 / span 1 / span 1;
+        }
+
+        @include between(560px, 1024px) {
+            grid-area: 4 / 2 / span 1 / span 2;
+            align-self: center;
+        }
+
+        //2nd Paragraph
+        + .content-paragraph {
+            grid-area: 5 / 2 / span 1 / span 2;
+            align-self: end;
+            padding-bottom: 3rem;
+
+            @include below(560px) {
+                grid-area: 7 / 2 / span 1 / span 1;
+                padding-bottom: 0;
+            }
+
+            @include between(560px, 1024px) {
+                grid-area: 5 / 2 / span 1 / span 5;
+                align-self: end;
+                padding-bottom: 3rem;
+            }
+
+            //3rd Paragraph
+            + .content-paragraph {
+                grid-area: 5 / 4 / span 1 / span 3;
+
+                @include below(560px) {
+                    grid-area: 8 / 2 / span 1 / span 1;
+                }
+
+                @include between(560px, 1024px) {
+                    grid-area: 6 / 2 / span 1 / span 5;
+                }
+    
+                //4th Paragraph
+                + .content-paragraph {
+                    grid-area: 6 / 4 / span 1 / span 3;
+
+                    @include below(560px) {
+                        grid-area: 9 / 2 / span 1 / span 1;
+                    }
+
+                    @include between(560px, 1024px) {
+                        grid-area: 7 / 2 / span 1 / span 5;
+                    }
+                }
+            }
+        }
+    }
+
+    .content-quote {
+        grid-area: 3 / 4 / span 1 / span 3;
+        font-size: 2.4rem;
+        text-align: center;
+
+        @include below(560px) {
+            grid-area: 4 / 2 / span 1 / span 1;
+            font-size: 1.6rem;
+            margin-top: 0;
+        }
+
+        @include between(560px, 1440px) {
+            font-size: 1.5rem;
+        }
+
+        .quote-text {
+            font-style: italic;
+        }
+
+        .quote-author {
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: right;
+        }
+    }
+}

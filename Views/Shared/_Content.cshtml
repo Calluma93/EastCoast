@@ -1,0 +1,35 @@
+﻿@using Eastcoast.Models.Shared.Content
+@model IEnumerable<ContentViewModel>
+
+@foreach (var section in Model)
+{
+    if (section is SubHeadingViewModel)
+    {
+        SubHeadingViewModel subHeading = (SubHeadingViewModel)section;
+
+        <div class="content-subheading">
+            <p>
+                @subHeading.Text
+            </p>
+        </div>
+    }
+    else if (section is ParagraphViewModel)
+    {
+        ParagraphViewModel paragraph = (ParagraphViewModel)section;
+
+        <div class="content-paragraph">
+            <p>
+                @paragraph.Text
+            </p>
+        </div>
+    }
+    else if (section is QuoteViewModel)
+    {
+        QuoteViewModel quote = (QuoteViewModel)section;
+
+        <div class="content-quote">
+            <p class="quote-text">@quote.Text</p>
+            <p class="quote-author">@quote.Author</p> 
+        </div>
+    }
+}

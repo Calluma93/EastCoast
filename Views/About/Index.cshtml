@@ -1,0 +1,25 @@
+﻿@model Eastcoast.Models.About.AboutPageViewModel
+
+@section Meta{
+    @Html.Partial("_MetaSection", Model)
+}
+
+@Html.Partial("_Banner", Model)
+
+<div class="about-page">
+
+    <h1 class="heading-text">@Model.Heading</h1>
+
+    @foreach (var images in Model.PageImages)
+    {
+        <a href="@images.LinkUrl">
+            <img src="@images.ImageUrl" alt="@images.Title" />
+        </a>
+    }
+
+    <img class="eastcoast-logo" src="@Model.EastCoastLogo.ImageUrl" alt="@Model.EastCoastLogo.Title"/>
+
+    @Html.Partial("_Content", Model.Content)
+
+</div>
+

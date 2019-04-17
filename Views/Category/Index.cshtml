@@ -1,0 +1,28 @@
+﻿@model Eastcoast.Models.Category.CategoryPageViewModel
+
+@section Meta{
+    @Html.Partial("_MetaSection", Model)
+}
+
+@Html.Partial("_Banner", Model)
+
+<div class="category-page">
+
+    <h1 class="heading-text">@Model.Heading</h1>
+
+    @foreach (var product in Model.Products)
+    {
+        <div class="product">
+            <a href=@product.Url>
+
+                <img src="@product.ImageUrl" alt="@product.Title">
+
+                <p class="product-title">
+                    @product.Title
+                </p>
+            </a>
+        </div>
+    }
+
+</div>
+

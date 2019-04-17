@@ -1,0 +1,27 @@
+﻿@using Eastcoast.Models.Shared
+@model IEnumerable<MenuItemViewModel>
+
+<ul class="menu-list">
+    @foreach (var item in Model)
+    {
+        <li class="menu-list-item @(item.SubMenu == null ? "" : "has-children") ">
+
+            <span class="menu-link-wrapper">
+                <a href="@item.Url" class="menu-link">@item.Text</a>
+            </span>
+
+            @if (item.SubMenu != null)
+            {
+                <ul class="sub-menu-container">
+                    @foreach (var subItem in item.SubMenu)
+                    {
+                        <li class="sub-menu-list-item">
+                            <a href="@subItem.Url" class="sub-menu-link">@subItem.Text</a>
+                        </li>
+                    }
+                </ul>
+            }
+
+        </li>
+    }
+</ul>

@@ -1,0 +1,16 @@
+﻿@model Eastcoast.Models.Product.SpecificationViewModel
+
+<div class="specifications">
+    <h2 class="specification-heading">
+        specifications
+    </h2>
+
+    <div class="specifications-body">
+        <p><span class="specs-title @(@Model.IsAmp == true ? "hidden" : "")">body:</span> @Model.Body</p>
+        <p><span class="specs-title @(@Model.IsAmp == true ? "hidden" : "")">neck:</span> @Model.Neck</p>
+        <p><span class="specs-title @(@Model.IsAmp == true ? "hidden" : "")">fingerboard:</span> @Model.Fingerboard</p>
+        <p><span class="specs-title @(@Model.IsAmp == true ? "hidden" : "")">construction:</span> @Model.Contruction</p>
+        <p><span class="specs-title @(@Model.IsAmp == true ? "hidden" : "")">pickups:</span> @Model.Pickups</p>
+        <p><span class="specs-title @(@Model.IsAmp == true ? "hidden" : "")">scale length:</span> @Model.ScaleLength</p>
+    </div>
+</div>

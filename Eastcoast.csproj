@@ -1,0 +1,830 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A8873AF-325A-4BC2-B80F-B3A4105AA8CC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Eastcoast</RootNamespace>
+    <AssemblyName>Eastcoast</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.3.1.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.3.1\lib\net45\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common.WebHost, Version=3.3.1.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.WebHost.3.3.1\lib\net45\Ninject.Web.Common.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.MVC5.3.3.0\lib\net45\Ninject.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apple-touch-icon.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\About\about-thumb-1.jpg" />
+    <Content Include="Images\About\about-thumb-2.jpg" />
+    <Content Include="Images\About\about-thumb-3.jpg" />
+    <Content Include="Images\About\about-thumb-4.jpg" />
+    <Content Include="Images\Banners\about-banner.jpg" />
+    <Content Include="Images\Banners\acoustic-category-banner-1.jpg" />
+    <Content Include="Images\Banners\acoustic-product-banner-1.jpg" />
+    <Content Include="Images\Banners\amp-category-banner-1.jpg" />
+    <Content Include="Images\Banners\amp-product-banner-1.jpg" />
+    <Content Include="Images\Banners\bass-category-banner-1.jpg" />
+    <Content Include="Images\Banners\bass-category-banner-2.jpg" />
+    <Content Include="Images\Banners\bass-product-banner-1.jpg" />
+    <Content Include="Images\Banners\bass-product-banner-2.jpg" />
+    <Content Include="Images\Banners\electric-category-banner-1.jpg" />
+    <Content Include="Images\Banners\electric-category-banner-2.jpg" />
+    <Content Include="Images\Banners\electric-product-banner-1.jpg" />
+    <Content Include="Images\Banners\electric-product-banner-2.jpg" />
+    <Content Include="Images\Banners\electric-product-banner-3.jpg" />
+    <Content Include="Images\Banners\home-banner-1.jpg" />
+    <Content Include="Images\Banners\home-banner-2.jpg" />
+    <Content Include="Images\Banners\home-banner-3.jpg" />
+    <Content Include="Images\Banners\home-banner-4.jpg" />
+    <Content Include="Images\Banners\home-banner-5.jpg" />
+    <Content Include="Images\Banners\home-banner-6.jpg" />
+    <Content Include="Images\Banners\products-banner-2.jpg" />
+    <Content Include="Images\Banners\products-banner.jpg" />
+    <Content Include="Images\Banners\retailers-banner.jpg" />
+    <Content Include="Images\Home\gs100h-lifestyle.jpg" />
+    <Content Include="Images\Home\contact-nav.jpg" />
+    <Content Include="Images\Home\ec10g-lifestyle.jpg" />
+    <Content Include="Images\Home\gdt320-lifestyle.jpg" />
+    <Content Include="Images\Home\gtb005t-lifestyle.jpg" />
+    <Content Include="Images\Home\products-nav.jpg" />
+    <Content Include="Images\Home\about-nav.jpg" />
+    <Content Include="Images\Home\where-to-buy-nav.jpg" />
+    <Content Include="Images\Home\gl130-lifestyle.jpg" />
+    <Content Include="Images\Mobile\about-banner.jpg" />
+    <Content Include="Images\Mobile\acoustic-category-banner-1.jpg" />
+    <Content Include="Images\Mobile\acoustic-product-banner-1.jpg" />
+    <Content Include="Images\Mobile\amp-category-banner-1.jpg" />
+    <Content Include="Images\Mobile\amp-product-banner-1.jpg" />
+    <Content Include="Images\Mobile\bass-category-banner-1.jpg" />
+    <Content Include="Images\Mobile\bass-category-banner-2.jpg" />
+    <Content Include="Images\Mobile\bass-product-banner-1.jpg" />
+    <Content Include="Images\Mobile\electric-category-banner-1.jpg" />
+    <Content Include="Images\Mobile\electric-category-banner-2.jpg" />
+    <Content Include="Images\Mobile\electric-product-banner-1.jpg" />
+    <Content Include="Images\Mobile\electric-product-banner-2.jpg" />
+    <Content Include="Images\Mobile\electric-product-banner-3.jpg" />
+    <Content Include="Images\Mobile\home-banner-1.jpg" />
+    <Content Include="Images\Mobile\home-banner-2.jpg" />
+    <Content Include="Images\Mobile\home-banner-3.jpg" />
+    <Content Include="Images\Mobile\home-banner-4.jpg" />
+    <Content Include="Images\Mobile\home-banner-5.jpg" />
+    <Content Include="Images\Mobile\home-banner-6.jpg" />
+    <Content Include="Images\Mobile\products-banner-2.jpg" />
+    <Content Include="Images\Mobile\products-banner.jpg" />
+    <Content Include="Images\Mobile\retailers-banner.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOAE\thumbnail.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Acoustics\MKOA\thumbnail.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Amps\EC10G\thumbnail.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Basses\B210\FL-Natural-Satin\thumbnail.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Basses\B210\Grey-Quilt\thumbnail.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Basses\B210\LH-2-Tone-Sunburst\thumbnail.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Black-Satin\thumbnail.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Basses\GJB200M\Natural\thumbnail.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Arctic-White\thumbnail.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Basses\GPB10\Sunburst\thumbnail.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Basses\GTB005T\Natural\thumbnail.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Basses\GTB055T\Natural\thumbnail.jpg" />
+    <Content Include="Images\Products\Categories\acoustic-category.jpg" />
+    <Content Include="Images\Products\Categories\amp-category.jpg" />
+    <Content Include="Images\Products\Categories\bass-category.jpg" />
+    <Content Include="Images\Products\Categories\electric-category.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Blue-Quilt\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GDT230\Grey-Quilt\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Black-Ice-Burst\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Cherry-Sunburst\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\LH-Cherry-Sunburst\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GDT320\Dark-Cherry\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Black\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Pink\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GK20\Red\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Blue-Burst\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Heritage-Cherry-Sunburst\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GL130\Trans-Black\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Cherry-Sunburst\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GL20\Tobacco-Sunburst\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Arctic-White\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\LH-Arctic-White\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Black-Metallic\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GS100H\Race-Red\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Black\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Grey-Quilt\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Lake-Placid-Blue\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GT100\Vintage-Blonde\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Black-Quilt\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Spalted-Maple\thumbnail.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\Large\detail-large-1.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\Large\detail-large-2.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\Large\detail-large-3.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\Large\detail-large-4.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\Large\detail-large-5.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\Large\detail-large-6.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\Small\detail-small-1.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\Small\detail-small-2.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\Small\detail-small-3.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\Small\detail-small-4.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\Small\detail-small-5.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\Small\detail-small-6.jpg" />
+    <Content Include="Images\Products\Electrics\GVQ230\Sunburst\thumbnail.jpg" />
+    <Content Include="Images\Retailers\where-to-buy-andertons.jpg" />
+    <Content Include="Images\Retailers\where-to-buy-guitar.jpg" />
+    <Content Include="Images\Retailers\where-to-buy-pmt.jpg" />
+    <Content Include="Images\Shared\eastcoast-logo.png" />
+    <Content Include="Images\Shared\hamburger-menu.png" />
+    <Content Include="Images\Shared\facebook-icon.jpg" />
+    <Content Include="Images\Shared\instagram-icon.jpg" />
+    <Content Include="Images\Shared\twitter-icon.jpg" />
+    <Content Include="robots.txt" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="sitemap.xml" />
+    <Content Include="src\index.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\NinjectConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\WhereToBuyController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ColourOptionHelper.cs" />
+    <Compile Include="Helpers\ConfigHelper.cs" />
+    <Compile Include="Helpers\ContentHelper.cs" />
+    <Compile Include="Helpers\EastcoastUrlHelper.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\ProductHelper.cs" />
+    <Compile Include="Helpers\SpecsHelper.cs" />
+    <Compile Include="Helpers\WhereToBuyHelper.cs" />
+    <Compile Include="Models\About\AboutPageViewModel.cs" />
+    <Compile Include="Models\Category\CategoryPageViewModel.cs" />
+    <Compile Include="Models\Category\CategoryViewModel.cs" />
+    <Compile Include="Models\Home\HomePageImageViewModel.cs" />
+    <Compile Include="Models\Home\HomePageViewModel.cs" />
+    <Compile Include="Models\Products\ProductsPageViewModel.cs" />
+    <Compile Include="Models\Product\ColourOptionViewModel.cs" />
+    <Compile Include="Models\Product\ProductPageViewModel.cs" />
+    <Compile Include="Models\Product\SpecificationViewModel.cs" />
+    <Compile Include="Models\Shared\BannerViewModel.cs" />
+    <Compile Include="Models\Shared\Content\ContentViewModel.cs" />
+    <Compile Include="Models\Shared\Content\ParagraphViewModel.cs" />
+    <Compile Include="Models\Shared\Content\QuoteViewModel.cs" />
+    <Compile Include="Models\Shared\Content\SubHeadingViewModel.cs" />
+    <Compile Include="Models\Shared\ImageViewModel.cs" />
+    <Compile Include="Models\Shared\LayoutViewModel.cs" />
+    <Compile Include="Models\Shared\MenuItemViewModel.cs" />
+    <Compile Include="Models\Shared\PageViewModel.cs" />
+    <Compile Include="Models\Shared\ProductOverviewViewModel.cs" />
+    <Compile Include="Models\Shared\ResponsiveImageViewModel.cs" />
+    <Compile Include="Models\WhereToBuy\RetailerViewModel.cs" />
+    <Compile Include="Models\WhereToBuy\WhereToBuyPageViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\WhereToBuy\Index.cshtml" />
+    <Content Include="Views\Shared\_Banner.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Shared\NotFound.cshtml" />
+    <Content Include="Views\Shared\_MetaSection.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="src\scss\index.scss" />
+    <Content Include="src\scss\pages\_home.scss" />
+    <Content Include="src\scss\pages\_notfound.scss" />
+    <Content Include="src\scss\shared\_banner.scss" />
+    <Content Include="src\scss\shared\_fonts.scss" />
+    <Content Include="src\scss\shared\_layout.scss" />
+    <Content Include="src\scss\shared\_menu.scss" />
+    <Content Include="src\scss\shared\_mixins.scss" />
+    <Content Include="src\scss\shared\_resets.scss" />
+    <Content Include="src\scss\shared\_slider.scss" />
+    <Content Include="src\scss\shared\_variables.scss" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Shared\_Content.cshtml" />
+    <Content Include="Views\Shared\_Specifications.cshtml" />
+    <Content Include="Views\Shared\_Options.cshtml" />
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{da5cf3ad-d158-4c7a-9a75-5c120bda232c}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55084</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55085/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:55085/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>cd $(ProjectDir)
+npm run build</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

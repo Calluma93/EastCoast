@@ -1,0 +1,69 @@
+// ###### Layout Page ###### \\
+// ###### Header ###### \\
+
+.main-header {
+    background: $white;
+    display: grid;
+    grid-template-columns: [left-gutter] 10% [left-logo] 20% [menu] auto [right-logo] 20% [right-gutter] 10%;
+    padding-bottom: 20px;
+
+    @include between(768px, 1166px) {
+        grid-template-columns: [left-gutter] 10% [left-logo] 20% [menu] auto [right-logo] 0% [right-gutter] 10%;
+    }
+    
+    .hamburger {
+        align-self: center;
+        grid-column: right-logo / right-gutter;
+        justify-self: end;
+        cursor: pointer;
+    
+        @include above($mobile) {
+            display: none;
+        }
+    }
+    
+    .logo {
+        align-self: center;
+        margin-top: 10px;
+        grid-column: left-logo / menu;
+
+        @include below(768px) {
+            margin: 20px auto;
+            grid-column: menu / right-logo;
+        }
+    }
+
+    .menu {
+        grid-column: menu / right-logo;
+
+        @include below(769px) {
+            display: none;
+        }
+    }
+}
+
+// ###### Footer ###### \\
+.main-footer {
+    color: $white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 16px;
+    margin-top: 100px;
+    padding: 40px;
+    background-color: $black;
+
+    @include below(426px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .copyright {
+        grid-area: 1 / 1 / span 1 / span 1;
+        align-self: center;
+
+        @include below(426px) {
+            grid-area: 1 / 1 / span 1 / span 2;
+            text-align: center;
+        }
+    }
+}

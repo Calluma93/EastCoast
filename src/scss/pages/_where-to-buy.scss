@@ -1,0 +1,85 @@
+.where-to-buy-page {
+    display: grid;
+    grid-template-rows: 10% 10% 70% 10%;
+    grid-template-columns: 3% 1fr 1fr 1fr 3%;
+    justify-items: center;
+
+    @include below(1024px) {
+        grid-template-rows: auto;
+        grid-template-columns: 3% 1fr 3%;
+    }
+
+    .heading-text {
+        grid-area: 1 / 2 / span 1 / span 3;
+        margin-top: 50px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2rem;
+        margin-top: 20px;
+
+        @include below(1024px) {
+            grid-area: 1 / 2 / span 1  / span 1;
+        }
+    }    
+
+    .subheading-text {
+        grid-area: 2 / 2 / span 1 / span 3;
+        margin-top: 20px;
+        font-size: 1rem;
+
+        @include below(1024px) {
+            grid-area: 2 / 2 / span 1  / span 1;
+            text-align: center;
+        }
+    }   
+
+    img {
+        border-radius: 50%;
+        width: 400px;
+    }
+
+    a {
+        margin-top: 20px;
+
+        &:nth-child(3) {
+            grid-area: 3 / 2 / span 1 / span 1;
+
+            @include below(1024px) {
+                grid-area: 3 / 2 / span 1  / span 1;
+                margin-top: 50px;
+            }
+        }
+
+        &:nth-child(4) {
+            grid-area: 3 / 3 / span 1 / span 1;
+
+            @include below(1024px) {
+                grid-area: 4 / 2 / span 1  / span 1;
+                margin-top: 0;
+            }
+        }
+
+        &:nth-child(5) {
+            grid-area: 3 / 4 / span 1 / span 1;
+
+            @include below(1024px) {
+                grid-area: 5 / 2 / span 1  / span 1;
+            }
+        }
+
+        p {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 50px;
+
+            @include below(1024px) {
+                margin: 50px 0 50px;
+            }
+        }
+
+        @include below(1024px) {
+            max-width: 280px;
+        }
+    }
+}
